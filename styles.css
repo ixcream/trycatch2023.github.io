@@ -6,11 +6,12 @@
 }
 
 html, body {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     height: 100%;
-    overflow: auto;
+    overflow: auto; */
     background-color: #020326;
+    overflow-x: hidden;
 }
 
 p {
@@ -94,7 +95,7 @@ img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding-left: 5rem;
+    padding-left: 3rem;
     height: 100%;
 }
 
@@ -315,23 +316,26 @@ img {
 /* Mobile Responsive */
 @media screen and (max-width: 960px) {
     .main__container {
-        display: grid;
-        grid-template-columns: none;
+        /* display: grid; */
+        /* grid-template-columns: none; */
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-self: center;
+        justify-self: flex-start;
         width: 100%;
         margin: 0 auto;
-        height: 90vh;
+        height: auto;
     }
 
     .main__content {
         text-align: center;
-        margin-bottom: 1rem;
+        height: auto;
+        margin: 1rem;
     }
 
     .main__btn {
         padding: 12px 36px;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     #main__img {
@@ -343,13 +347,7 @@ img {
 
 @media screen and (max-width: 480px) {
     .main__container {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 0;
-        height: 70vh;
+        padding: 0 30px;
     }
 
     .main__content {
@@ -360,13 +358,6 @@ img {
         width: 100%;
         margin-bottom: 1.5rem;
         min-width: 0px;
-    }
-
-    #main__img {
-        border-radius: 15px;
-        height: 80%;
-        width: 100%;
-        margin: 0;
     }
 
     .main__btn {
@@ -392,7 +383,6 @@ img {
 /* Info Section CSS */
 .info {
     background-color: #020326;
-    /* overflow: hidden; */
     padding-top: 5rem;
 }
 
@@ -420,25 +410,27 @@ img {
     margin-bottom: 1.5rem;
 }
 
+.info__img--container {
+    text-align: center;
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 960px) {
-    /* .info {
-        padding-top: 20rem;
-    } */
     .info {
         height: auto;
     }
 
     .info__container {
-        display: grid;
-        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-self: center;
-        
+        justify-self: flex-start;
         width: 100%;
         margin: 0 auto;
-        /* margin-top: 5rem; */
-        /* height: 100vh; */
+        height: auto;
+        padding: 0 6rem;
+        gap: 3rem;
+
     }
 
     .info__container div:nth-child(1) { order: 2; }
@@ -451,15 +443,4 @@ img {
         width: 90%;
         margin: 0;
     }
-
-
-}
-
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
 }
