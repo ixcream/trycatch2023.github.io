@@ -124,7 +124,7 @@ img {
         top: -1000px;
         opacity: 0;
         transition: all 0.5s ease;
-        height: 75vh;
+        height: 90vh;
         z-index: -1;
     }
 
@@ -134,7 +134,7 @@ img {
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 75vh;
+        height: 90vh;
         font-size: 1.6rem;
     }
 
@@ -156,7 +156,7 @@ img {
 
     .navbar__item {
         width: 100%; 
-        height: 80px;
+        height: 4.5rem;
         font-size: 1rem;
         font-weight: 500;
     }
@@ -197,7 +197,7 @@ img {
     .navbar__container {
         display: flex;
         justify-content: space-between;
-        height: 80px;
+        height: 100px;
         z-index: 1;
         width: 100%;
         max-width: 1300px;
@@ -211,6 +211,16 @@ img {
         height: 50%;
         width: 50%;
         padding-left: 0.5rem;
+    }
+
+    .navbar__menu.active {
+        background: #020326;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: auto;
+        font-size: 1.6rem;
     }
 
     #mobile-menu {
@@ -430,9 +440,9 @@ img {
         height: auto;
         padding: 0 6rem;
         gap: 3rem;
-
     }
 
+    /* To make it go text, info, text, info */
     .info__container div:nth-child(1) { order: 2; }
     .info__container div:nth-child(2) { order: 1; }
     .info__container div:nth-child(3) { order: 3; }
@@ -445,8 +455,24 @@ img {
     }
 }
 
-/* Footer Section CSS */
+@media screen and (max-width: 480px) {
+    .info__container {
+        padding: 0 30px;
+        gap: 1rem
+    }
 
+    .info__txt--container h1{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .info__txt--container p{
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Footer Section CSS */
 .footer {
     margin-top: 7rem;
     background-color: #060419;
@@ -460,10 +486,23 @@ img {
 }
 
 .footer__logo {
+    display: flex;
+    justify-content: center;
     width: fit-content;
 }
 
 #footer__img {
     text-align: center;
     width: 70%;
+}
+
+@media screen and (max-width: 480px) {
+    .footer__container {
+        padding: 0.5rem 0;
+    }
+
+    #footer__img {
+        text-align: center;
+        width: 50%;
+    }
 }
