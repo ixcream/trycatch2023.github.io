@@ -37,6 +37,15 @@ img {
     border-radius: 15px;
 }
 
+/* Link colours */
+.faq, .sfuwics a:link {
+    color: #C0FFFF;
+}
+
+.faq, .sfuwics a:visited {
+    color: #EE38B2;
+}
+
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
@@ -50,6 +59,120 @@ img {
         font-size: 0.8rem;
     }
 }
+
+#page__blurb {
+    width: 60%;
+    padding: 1.2rem 0;
+}
+
+@media screen and (max-width: 720px) {
+    #page__blurb {
+        width: 100%;
+        padding: 1.2rem 0;
+    }
+}
+
+/* PROFILE CSS */
+.profile__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.profile__name--container {
+    grid-area: name;
+}
+
+.profile__blurb--container {
+    grid-area: blurb;
+}
+
+.profile__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "name name"
+    "img blurb";
+    gap: 0.5rem;
+}
+
+.profile__img--container {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__img--container img {
+    width: 100%;
+}
+
+#profile__name {
+    font-weight: 550;
+}
+
+/* PROFILE MOBILE RESPONSIVE */
+@media screen and (max-width: 1050px) {
+    .profile__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "img name"
+        "blurb blurb";
+        gap: 1rem;
+    }
+
+    #profile__name {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .profile__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .profile__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "name name"
+        "img blurb";
+        gap: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .profile__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .profile__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "img name"
+        "blurb blurb";
+        gap: 1rem;
+    }
+
+    #profile__name {
+        font-size: 1rem;
+    }
+}
+
 
 .navbar {
     background: #020326;
@@ -683,107 +806,6 @@ img {
     }
 }
 
-/* PROFILE CSS */
-.profile__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.profile__name--container {
-    grid-area: name;
-}
-
-.profile__blurb--container {
-    grid-area: blurb;
-}
-
-.profile__container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "name name"
-    "img blurb";
-    gap: 0.5rem;
-}
-
-.profile__img--container {
-    grid-area: img;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile__img--container img {
-    width: 100%;
-}
-
-#profile__name {
-    font-weight: 550;
-}
-
-/* PROFILE MOBILE RESPONSIVE */
-@media screen and (max-width: 1050px) {
-    .profile__container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "img name"
-        "blurb blurb";
-        gap: 1rem;
-    }
-
-    #profile__name {
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .profile__content {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .profile__container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "name name"
-        "img blurb";
-        gap: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 440px) {
-    .profile__content {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .profile__container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "img name"
-        "blurb blurb";
-        gap: 1rem;
-    }
-
-    #profile__name {
-        font-size: 1rem;
-    }
-}
-
 
 /* SPEAKER PAGE CSS */
 .speakers {
@@ -906,10 +928,7 @@ img {
     padding-top: 3rem;
 }
 
-#sponsors__blurb {
-    width: 60%;
-    padding: 1.2rem 0;
-}
+
 
 .sponsors__tier--container {
     padding: 2rem 0;
@@ -948,11 +967,6 @@ img {
 
 /* SPONSORS MOBILE RESPONSIVE */
 @media screen and (max-width: 720px) {
-    #sponsors__blurb {
-        width: 100%;
-        padding: 1.2rem 0;
-    }
-
     .company__content {
         display: flex;
         flex-direction: column;
@@ -1010,13 +1024,6 @@ img {
     padding-top: 2rem;
 }
 
-.faq a:link {
-    color: #C0FFFF;
-}
-
-.faq a:visited {
-    color: #EE38B2;
-}
 
 /* FAQ MOBILE RESPONSIVE */
 @media screen and (max-width: 670px) {
@@ -1037,3 +1044,93 @@ img {
         padding: 0.5rem 0;
     }
 }
+
+
+/* SFU WICS PAGE CSS */
+.sfuwics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding-bottom: 7rem;
+}
+
+.sfuwics #page__blurb {
+    padding: 0.5rem 0;
+}
+
+.sfuwics .profile__content {
+    padding-top: 2rem;
+}
+
+.committee__container {
+    padding-top: 2rem;
+}
+
+.sfuwics h1 {
+    padding-top: 3rem;
+}
+
+.wics__header {
+    grid-area: header;
+}
+
+.wics__blurb {
+    grid-area: blurb;
+}
+
+.wics__logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wics__logo img {
+    width: 80%;
+}
+
+.wics__info--container {
+    padding-top: 7rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "blurb logo";
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 750px) {
+    .wics__info--container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .wics__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+
+    }
+
+    .wics__logo img {
+        width: 70%;
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sfuwics {
+        padding: 0 25px;
+        padding-bottom: 7rem;
+    }
+}
+
