@@ -37,6 +37,10 @@ img {
     border-radius: 15px;
 }
 
+a:is(:link, :active, :visited).active {
+    color: #EE38B2;
+}
+
 /* Link colours */
 .faq, .sfuwics a:link {
     color: #C0FFFF;
@@ -240,7 +244,7 @@ img {
 }
 
 .navbar__links:hover {
-    color: #EE38B2;
+    color: #C0FFFF;
     transition: all 0.3s ease; 
 }
 
